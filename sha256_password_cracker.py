@@ -1,3 +1,4 @@
+from gc import disable
 import sys
 from pwn import * 
 
@@ -22,3 +23,4 @@ with log.progress("Attempting to crack {}!".format(wanted_hash)) as p:
 				exit()
 			attempts+=1
 		p.failure("Password hash not found!")
+		print
