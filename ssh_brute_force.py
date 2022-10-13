@@ -1,6 +1,9 @@
+from ast import If
 import sys
 from pwn import * 
-import paramiko 
+import paramiko
+
+from symbol import if_stmt 
 
 host = sys.argv[1]
 username = "" #populate usernames
@@ -26,6 +29,3 @@ with open("password_list.txt", "r") as password_list:   # add wordlist path
 		except paramiko.ssh_exception.AuthenticationException:
 			print("Invalid password")
 		attempts+=1
-
-
-

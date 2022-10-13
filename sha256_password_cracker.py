@@ -4,7 +4,7 @@ from pwn import *
 
 #param checker
 if len(sys.argv) != 3: 
-	print("Invalid Arguments")
+	print("Invalid Argument")
 	print(">> {} <sha256sum> <wordlist.txt>".format(sys.argv[0]))
 	exit()
 
